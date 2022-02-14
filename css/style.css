@@ -18,11 +18,11 @@
 }
 h1 
 {
-    font-size: 20px;
+    font-size: 22px;
 }
-h2 
+p
 {
-    font-size: 15px;
+    font-size: 18px;
 }
 /* POLICE =================================================================*/
 
@@ -40,25 +40,18 @@ body /*definition des styles principaux de la page*/
     color: black; /*couleur de la police*/
 }
 
-#logo_nav /*En-tête et liens de navigation*/
-{
-    display: flex; /*mise en ligne des diff bloc*/
-    justify-content: space-between; /*repartir de chaque coté*/
-    align-items: flex-end; /* aligné en bas*/
-}   
-
 #titre_principal /*distribution du titre principal*/
 {
     display: flex;
     flex-direction: column;
 }
 
-#logo_nav /*placement du logo+nav*/
+#logo_nav /*En-tête et liens de navigation*/
 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
+    display: flex; /*mise en ligne des diff bloc*/
+    justify-content: space-between; /*repartir de chaque coté*/
+    align-items: flex-start; /* aligné en bas*/
+}   
 
 #logo_nav img /*dimension du logo*/
 {
@@ -79,7 +72,7 @@ nav li /*marge entre les 2 liens*/
 
 nav a /*style des liens*/
 {
-    font-size: 12px;
+    font-size: 14px;
     color: #181818;
     padding-top: 20px;
     text-decoration: none;
@@ -105,4 +98,58 @@ nav a:hover /*coloration du lien au survol*/
     color: white;
     border: none;
     border-radius: 0px 10px 10px 0px;
+}
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */
+@media all and (min-width: 768px) and (max-width: 992px)
+{
+h1 
+{
+    font-size: 40px;
+}
+p 
+{
+    font-size: 25px;
+}
+#bloc_page /*l'ensemble du blocpage s'adapte à la largeur de la page*/
+{
+    width: auto; 
+    flex-direction: column;
+    
+}
+#logo_nav /*logo et nav en colonne*/
+{
+    flex-direction: column;
+    margin: auto;
+}
+
+#logo_nav img /*dimension du logo*/
+{
+    width: auto;
+    padding-left: none;
+}
+nav ul /*placement des liens et sans bouton*/
+{
+    list-style-type: none ;
+}
+nav li /*marge entre les 2 liens*/
+{
+    padding-left: 0px;
+}
+
+nav a /*style des liens*/
+{
+    font-size: 26px;
+    color: #181818;
+    padding-top: 20px;
+    text-decoration: none;
+    border-bottom: 4px solid #F2F2F2;
+}
+
+nav a:hover /*coloration du lien au survol*/
+{
+    color: #0065FC;
+    border-top: none;
+    border-bottom: 4px solid #0065FC;    
+}
 }
