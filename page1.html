@@ -2,37 +2,47 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <!--pour modifier la lageur du nav mobile -->
-        <meta name="viewport" content="width=device-width" /> <!--à creser non maitrise du sujet-->
-        <link rel="stylesheet" href="/css/style.css" />
+ <!-- Pour que le viewport soit le même que la largeur de l'écran : -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--viewport tablette de 992 à 768-->
+        <!--viewport mobil inf à 768-->
+<!--icon de l'onglet---------------------------------------------->
+        <link rel="icon" href="images/logo/Booki.png">
+<!--lien vers la feuille normalize---------------------------------------------->
+        <link rel="stylesheet" href="css/normalize.css">
+<!--lien vers la feuille de style---------------------------------------------->
+        <link rel="stylesheet" href="css/style.css">
+
         <title>site BOOKI</title>
     </head>
     
     <body>
-        <div id="bloc_page">
+        <div id="bloc_page"> <!--dive de l'ensemble de la page-->
 <!--haut de la page element fixe Vpc et Vmb-->
             <header>
                 <div id="titre_principal">
-                    <div id="logo">
-                        <img src="images/logo/Booki.png" alt="Logo de booki" />    
+                    <div id="logo_nav">
+                        <img src="images/logo/Booki.png" alt="Logo de booki"/>
+                        <nav> <!--lien sectionnel-->
+                            <ul>
+                                <li><a href="#Hebergements">Hébergements</a></li>
+                                <li><a href="#Activités">Activités</a></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div id="slogan">
                         <h1>Trouvez votre hebergement pour les vacances de rêve</h1>
-                        <p>En plein centre ville ou en pleine nanture</p>
+                        <p>En plein centre ville ou en pleine nature</p>
                     </div>
                 </div>
-                
-                <nav> <!--lien sectionnel-->
-                    <ul>
-                        <li><a href="#Hebergement">Hébergement</a></li>
-                        <li><a href="#Activité">Activité</a></li>
-                    </ul>
-                </nav>
-
-                <form methode="post" action="traitement PHP"></form> <!--formulaire-->
-                <input type="text" name="rchville" id="rchville">
-                <input type="submit" value="Recherche">
             </header>
+<!--formulaire-->
+                <div id="formulaire">
+                    <form methode="post" action="traitement PHP"></form> 
+                    <input type="search" value="Marseille, France" name="rchville" id="rchville">
+                    <input type="submit" value="Recherche" id="bouton_recherche">
+                </div>
+
 <!--Banniere filtres-->
             <div id="banniere_filtres">
                 <div id="filtres">
@@ -46,50 +56,50 @@
             </div>
 <!--Section logement à Marseille-->
             <section class="logmarseille">
-        <h1>Hébergements à Marseille</h1>
-                <aside class="logementmarseille">
-                    <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="" id="cannebiere" />
-                    <h2>Auberge La Cannebière</h2>
-                    <p>Nuit à partir de 25€</p>
-                    <p>****</p>
-                    </a>
-                </aside>
-                <aside class="logementmarseille">
-                    <a href="#"><img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="" id="hotel_du_port" />
-                    <h2>Hôtel du port</h2>
-                    <p>Nuit à partir de 52€</p>
-                    <p>*****</p>
-                    </a>
-                </aside>
-                <aside class="logementmarseille">
-                    <a href="#"><img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="" id="hotel_mouette" />
-                    <h2>Hôtel Les mouettes</h2>
-                    <p>Nuit à partir de 70€</p>
-                    <p>****</p>
-                    </a>
-                </aside>
-                <aside class="logementmarseille">
-                    <a href="#"><img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="" id="hotel_mer" />
-                    <h2>Hôtel de la mer</h2>
-                    <p>Nuit à partir de 46€</p>
-                    <p>***</p>
-                    </a>
-                </aside>
-                <aside class="logementmarseille">
-                    <a href="#"><img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="" id="Auberge_le_panier" />
-                    <h2>Auberge Le Panier</h2>
-                    <p>Nuit à partir de 23€</p>
-                    <p>****</p>
-                    </a>
-                </aside>
-                <aside class="logementmarseille">
-                    <a href="#"><img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="" id="Hotel_Amina" />
-                    <h2>Hôtel chez Amina</h2>
-                    <p>Nuit à partir de 96</p>
-                    <p>*****</p>
-                    </a>
-                </aside>
-                <p>Afficher plus</p>
+                <h1>Hébergements à Marseille</h1>
+                    <aside class="logementmarseille">
+                        <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="" id="cannebiere" />
+                        <h2>Auberge La Cannebière</h2>
+                        <p>Nuit à partir de 25€</p>
+                        <p>****</p>
+                        </a>
+                    </aside>
+                    <aside class="logementmarseille">
+                        <a href="#"><img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="" id="hotel_du_port" />
+                        <h2>Hôtel du port</h2>
+                        <p>Nuit à partir de 52€</p>
+                        <p>*****</p>
+                        </a>
+                    </aside>
+                    <aside class="logementmarseille">
+                        <a href="#"><img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="" id="hotel_mouette" />
+                        <h2>Hôtel Les mouettes</h2>
+                        <p>Nuit à partir de 70€</p>
+                        <p>****</p>
+                        </a>
+                    </aside>
+                    <aside class="logementmarseille">
+                        <a href="#"><img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="" id="hotel_mer" />
+                        <h2>Hôtel de la mer</h2>
+                        <p>Nuit à partir de 46€</p>
+                        <p>***</p>
+                        </a>
+                    </aside>
+                    <aside class="logementmarseille">
+                        <a href="#"><img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="" id="Auberge_le_panier" />
+                        <h2>Auberge Le Panier</h2>
+                        <p>Nuit à partir de 23€</p>
+                        <p>****</p>
+                        </a>
+                    </aside>
+                    <aside class="logementmarseille">
+                        <a href="#"><img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="" id="Hotel_Amina" />
+                        <h2>Hôtel chez Amina</h2>
+                        <p>Nuit à partir de 96</p>
+                        <p>*****</p>
+                        </a>
+                    </aside>
+                    <p>Afficher plus</p>
             </section>
 <!--Section les plus populaires-->
             <section class="logpopu">
@@ -151,36 +161,36 @@
                         </aside>
             </section>
 <!--pied de page-->             
-        <footer>
-                <div id="A_propos">
-                    <p>A propos</p>
-                    <div id="lap">
-                        <ul>
-                            <li><a href="#">Fonctionnement du site</a></li>
-                            <li><a href="#">Conditions générales de vente</a></li>
-                            <li><a href="#">Données et confidentialité</a></li>
-                        </ul>
+            <footer>
+                    <div id="A_propos">
+                        <p>A propos</p>
+                        <div id="lap">
+                            <ul>
+                                <li><a href="#">Fonctionnement du site</a></li>
+                                <li><a href="#">Conditions générales de vente</a></li>
+                                <li><a href="#">Données et confidentialité</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div id="Nos_hebergements">
-                    <p>Nos hébergements</p>
-                    <div id="lh">
-                        <ul>
-                            <li><a href="#">Chartre qualité</a></li>
-                            <li><a href="#">Soumettre votre hôtel</a></li>
-                        </ul>
+                    <div id="Nos_hebergements">
+                        <p>Nos hébergements</p>
+                        <div id="lh">
+                            <ul>
+                                <li><a href="#">Chartre qualité</a></li>
+                                <li><a href="#">Soumettre votre hôtel</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div id="Assitance">
-                    <p>Assitance</p>
-                    <div id="Ass">
-                        <ul>
-                            <li><a href="#">Centre d'aide</a></li>
-                            <li><a href="#">Nous contacter</a></li>
-                        </ul>
+                    <div id="Assitance">
+                        <p>Assitance</p>
+                        <div id="Ass">
+                            <ul>
+                                <li><a href="#">Centre d'aide</a></li>
+                                <li><a href="#">Nous contacter</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-        </footer>
+            </footer>
         </div>
     </body>
 </html>
