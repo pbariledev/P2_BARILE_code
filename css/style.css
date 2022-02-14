@@ -19,16 +19,18 @@
 h1 
 {
     font-size: 22px;
+    font-weight: 900;
 }
-p
+h2
 {
     font-size: 18px;
+    font-weight: lighter;
 }
 /* POLICE =================================================================*/
 
 #bloc_page /*largeur de la page et marge+auto=centré*/
 {
-    width: 992px;
+    width: 100%;
     margin: auto;
 }
 
@@ -36,7 +38,7 @@ p
 body /*definition des styles principaux de la page*/
 {
     background: none; /*definition du fond de page*/
-    font-family: 'ralewaythin', Arial, sans-serif; /*police de la page*/
+    font-family: 'ralewaythin', sans-serif, sans-serif; /*police de la page*/
     color: black; /*couleur de la police*/
 }
 
@@ -61,13 +63,15 @@ body /*definition des styles principaux de la page*/
 
 nav ul /*placement des liens et sans bouton*/
 {
+    width: 300px;
     list-style-type: none ;
     display: flex;
+    justify-content: space-between ;
 }
 
 nav li /*marge entre les 2 liens*/
 {
-    padding-left: 80px;
+    padding-left: 0px;
 }
 
 nav a /*style des liens*/
@@ -103,53 +107,50 @@ nav a:hover /*coloration du lien au survol*/
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */
 @media all and (min-width: 768px) and (max-width: 992px)
 {
-h1 
-{
-    font-size: 40px;
-}
-p 
-{
-    font-size: 25px;
-}
-#bloc_page /*l'ensemble du blocpage s'adapte à la largeur de la page*/
-{
-    width: auto; 
-    flex-direction: column;
-    
-}
-#logo_nav /*logo et nav en colonne*/
-{
-    flex-direction: column;
-    margin: auto;
-}
-
 #logo_nav img /*dimension du logo*/
 {
-    width: auto;
-    padding-left: none;
+    width: 200px;
 }
-nav ul /*placement des liens et sans bouton*/
+#logo_nav 
 {
-    list-style-type: none ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-nav li /*marge entre les 2 liens*/
+nav
 {
-    padding-left: 0px;
+    width:100%;
 }
-
+nav ul 
+{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around
+}
+nav li 
+{
+    width: 50%;
+    text-align: center;
+    border-bottom: 4px solid #F2F2F2;
+}
 nav a /*style des liens*/
 {
     font-size: 26px;
     color: #181818;
     padding-top: 20px;
     text-decoration: none;
-    border-bottom: 4px solid #F2F2F2;
+    border-bottom: none;
 }
-
-nav a:hover /*coloration du lien au survol*/
+nav li:hover /*coloration du lien au survol*/
 {
     color: #0065FC;
     border-top: none;
-    border-bottom: 4px solid #0065FC;    
+    border-bottom: 4px solid #0065FC; 
+    font-weight: bold;   
+}
+nav a:hover /*coloration du lien au survol*/
+{
+    border-top: none;
 }
 }
