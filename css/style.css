@@ -58,7 +58,7 @@ body /*definition des styles principaux de la page*/
 }   
 #logo_nav img /*dimension du logo*/
 {
-    width: 100px;
+    width: 120px;
     padding-left: 10px;
 }
 nav ul /*placement des liens et sans bouton*/
@@ -88,13 +88,17 @@ nav a:hover /*coloration du lien au survol*/
 }
 
 /*======================================FORMULAIRE============================*/
+.search
+{
+    display: none;
+}
 
-#formulaire
+#formulaire /*distribution du formulaire*/
 {
     display: flex;
     flex-direction: row;
 }
-.ensbl_loc
+.ensbl_loc /*mise en forme ensemble du formulaire*/
 {
     height: 40px;
     margin-bottom: 10px;
@@ -105,7 +109,7 @@ nav a:hover /*coloration du lien au survol*/
     align-items: center;
 }
 
-#loc_map
+#loc_map /*mise en forme icone loc*/
 {
     text-align: center;
     background-color: #F2F2F2;
@@ -115,13 +119,13 @@ nav a:hover /*coloration du lien au survol*/
     height: 40px;
 }
 
-.flex 
+.flex /*mise en place icone loc*/
 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#rchville
+#rchville /*mise en forme bloc à remplir*/
 {
     border: none;
     height: 38px;
@@ -136,28 +140,35 @@ nav a:hover /*coloration du lien au survol*/
     border: none;
     border-radius: 0px 10px 10px 0px;
     font-weight: bold;
+    padding-left: 16px;
 }
 /*======================================FILTRES==============================*/
-*, *::before, *::after {
+*, *::before, *::after /*ajout contenu esthétique*/
+{
     box-sizing: border-box;
   }
-.ensbl_filtres
+.parent /*alignement des elements filtres-parent*/
 {
   display: flex;
   align-items: center;
+  height: 40px;
+  margin-bottom: 15px;
 }
-.container {
+.container /*alignement des elements filtres*/
+{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
   
 }
-.bouton_filtre {
+.bouton_filtre /*déplace des case à cocher*/
+{
     position: absolute;
     left: -9999px;
 }
-label {
+label /*mise en forme bouton long avant selection*/
+{
     
   display: block;
   position: relative;
@@ -168,7 +179,8 @@ label {
   border: 2px solid #F2F2F2;
   cursor: pointer;
  }
- label::before {
+ label::before 
+ {
     content: '';
     display: block;
     position: absolute;
@@ -178,16 +190,17 @@ label {
     width: 32px;
     border-radius: 100px;
  }
- input:checked + label {
+ input:checked + label /*mise en forme bouton long apres selection*/
+ {
     background-color: #0065FC;
     color: white;
   }
-  .parent
+  .parent */element /*parent pour placement champs et icon*/
   {
     display: flex;
     align-items: center;
   }
-  .child1
+  .child1 /*enfants pour placement champs et icon*/
   {
     display: flex;
     position: absolute;
@@ -262,7 +275,16 @@ nav a:hover /*coloration du lien au survol*/
 {
     border-top: none;
 }
+
+#formulaire /*centrer le formulaire*/
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
+} /*fermeture mq_tab*/
+
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise sous 768px */
 @media all and (max-width: 768px)
 {
@@ -321,4 +343,33 @@ nav a:hover /*coloration du lien au survol*/
 {
     border-top: none;
 }
+#formulaire /*centrer le formulaire*/
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+#bouton_recherche
+{
+    display: none;
+}
+.parent0 /*parent pour placement champs et icon*/
+  {
+    display: flex;
+    align-items: center;
+}
+.search
+{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    font-weight: bold;
+    align-items: center;
+    background-color: #0065FC;
+    justify-content: center;
+}
+
+}/*fermeture mq_mobil*/
