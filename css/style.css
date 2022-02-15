@@ -202,10 +202,7 @@ label {
     align-items: center;
     justify-content: center;
   }
-.information
-{
-    height: 30;
-}
+
 
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */
 @media all and (min-width: 768px) and (max-width: 992px)
@@ -266,7 +263,7 @@ nav a:hover /*coloration du lien au survol*/
     border-top: none;
 }
 }
-/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise sous 768px */
 @media all and (max-width: 768px)
 {
 h1 {
@@ -307,7 +304,7 @@ nav li
 }
 nav a /*style des liens*/
 {
-    font-size: 26px;
+    font-size: 20px;
     color: #181818;
     padding-top: 20px;
     text-decoration: none;
