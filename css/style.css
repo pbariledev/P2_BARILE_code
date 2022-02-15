@@ -23,12 +23,18 @@ h2
     font-size: 18px;
     font-weight: lighter;
 }
+h3
+{
+    font-size: 20px;
+    font-weight: 900;  
+    margin-right: 20px;
+}
 /* POLICE =================================================================*/
 
 #bloc_page /*largeur de la page et marge+auto=centré*/
 {
     width: 100%;
-    margin: auto;
+    padding: 20px;
 }
 body /*definition des styles principaux de la page*/
 {
@@ -36,6 +42,9 @@ body /*definition des styles principaux de la page*/
     font-family: 'ralewaythin', sans-serif, sans-serif; /*police de la page*/
     color: black; /*couleur de la police*/
 }
+
+/*==============HEADER========================================================*/
+
 #titre_principal /*distribution du titre principal*/
 {
     display: flex;
@@ -54,10 +63,12 @@ body /*definition des styles principaux de la page*/
 }
 nav ul /*placement des liens et sans bouton*/
 {
-    width: 300px;
+    width: 250px;
     list-style-type: none ;
     display: flex;
     justify-content: space-between ;
+    padding-inline-start: 0px;
+
 }
 nav li /*marge entre les 2 liens*/
 {
@@ -75,10 +86,46 @@ nav a:hover /*coloration du lien au survol*/
     color: #0065FC;
     border-top: 2px solid #0065FC;
 }
+
+/*======================================FORMULAIRE============================*/
+
+#formulaire
+{
+    display: flex;
+    flex-direction: row;
+}
+.ensbl_loc
+{
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+#loc_map
+{
+    text-align: center;
+    background-color: #F2F2F2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.flex 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #rchville
 {
-    border: 1px solid #F2F2F2;
-    height: 40px;
+    border: none;
+    height: 38px;
+    padding-left: 10px;
 }
 #bouton_recherche /*style bouton recherche*/
 {
@@ -88,6 +135,76 @@ nav a:hover /*coloration du lien au survol*/
     color: white;
     border: none;
     border-radius: 0px 10px 10px 0px;
+    font-weight: bold;
+}
+/*======================================FILTRES==============================*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+.ensbl_filtres
+{
+  display: flex;
+  align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  
+}
+.bouton_filtre {
+    position: absolute;
+    left: -9999px;
+}
+label {
+    
+  display: block;
+  position: relative;
+  margin: 40px;
+  padding: 10px 33px 10px 58px;
+  border-radius: 100px;
+  color: black;
+  border: 2px solid #F2F2F2;
+  cursor: pointer;
+ }
+ label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: 32px;
+    border-radius: 100px;
+ }
+ input:checked + label {
+    background-color: #0065FC;
+    color: white;
+  }
+  .parent
+  {
+    display: flex;
+    align-items: center;
+  }
+  .child1
+  {
+    display: flex;
+    position: absolute;
+    margin-left: 40px;
+    z-index: 1;
+    text-align: center;
+    color: blue;
+    border-radius: 20px 20px 20px 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #DEEBFF;
+    align-items: center;
+    justify-content: center;
+  }
+.information
+{
+    height: 30;
 }
 
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */

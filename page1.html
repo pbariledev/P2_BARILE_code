@@ -22,8 +22,8 @@
     </head>
     
     <body>
-        <div id="bloc_page"> <!--dive de l'ensemble de la page---------->
-        <!--header--haut de page---------------------------------------------------->
+        <div id="bloc_page"> <!--div de l'ensemble de la page---------->
+<!--header--haut de page---------------------------------------------------->
         <header>
             <div id="titre_principal">
                 <div id="logo_nav">
@@ -41,9 +41,72 @@
                 </div>
             </div>
         </header>
-        <!--section formulaire-->
+<!--section formulaire-->
+        <div id="formulaire">
+            <form methode="post" action="traitement_php" class="ensbl_loc">
+                <div id="loc_map" class="flex"><i class="fa-solid fa-location-dot"></i>
+                </div>
+                <input type="search" value="Marseille, France" name="rchville" id="rchville">
+                <input type="submit" value="Recherche" id="bouton_recherche">
+            </form> 
+        </div>
+<!--section filtres-->
+        <div id="banniere_filtres">
+            <form action="select" class="ensbl_filtres">
+                
+                    <div class="container">
+                        <h3>Filtres</h3>
+                            <div id="money">
+                                <div class="parent">
+                                    <div class="child1">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                    </div>                      
+                                    <div class="child2">
+                                            <input class="bouton_filtre" id="bouton1" type="checkbox">
+                                            <label for="bouton1">Economique</label>
+                                    </div>
+                                </div>
+                            </div>
 
-        <!--section filtres-->
+                            <div id="famille">
+                                <div class="parent">
+                                    <div class="child1">
+                                        <i class="fa-solid fa-child"></i>
+                                    </div>                      
+                                    <div class="child2">
+                                            <input class="bouton_filtre" id="bouton2" type="checkbox">
+                                            <label for="bouton2">Familial</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="romantique">
+                                <div class="parent">
+                                    <div class="child1">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>                      
+                                    <div class="child2">
+                                            <input class="bouton_filtre" id="bouton3" type="checkbox">
+                                            <label for="bouton3">Romantique</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="animaux">
+                                <div class="parent">
+                                    <div class="child1">
+                                        <i class="fa-solid fa-dog"></i>
+                                    </div>                      
+                                    <div class="child2">
+                                            <input class="bouton_filtre" id="bouton4" type="checkbox">
+                                            <label for="bouton4">Animaux autorisés</label>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </form>  
+        <div class="information"><p><i class="fa-solid fa-circle-info"></i> Plus de 500 logements snt disponibles dans cette ville.</p></div>             
+        </div>
 
         <!--Section logement a Marseille-->
 
