@@ -73,6 +73,7 @@ nav ul /*placement des liens et sans bouton*/
 nav li /*marge entre les 2 liens*/
 {
     padding-left: 0px;
+    font-weight: bold;
 }
 nav a /*style des liens*/
 {
@@ -215,13 +216,16 @@ label /*mise en forme bouton long avant selection*/
     align-items: center;
     justify-content: center;
   }
+/*======================================cadre Hebergement à XXXXXX==============================*/
+
 
 
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 768px et 992px */
 @media all and (min-width: 768px) and (max-width: 992px)
 {
-h1 {
-    width: auto;
+h1
+{
+    width: 100%;
     text-align: center;
 }
 h2
@@ -288,6 +292,10 @@ nav a:hover /*coloration du lien au survol*/
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise sous 768px */
 @media all and (max-width: 768px)
 {
+*
+{
+    font-size: 104%
+}
 h1 {
     width: auto;
     text-align: center;
